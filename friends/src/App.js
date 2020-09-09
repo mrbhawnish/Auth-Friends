@@ -9,8 +9,10 @@ function App() {
   return (
     <div className="App">
      <Link to="/login"> Login</Link>
+    <br />
      <Link to="/protected" > Protected Page</Link>
-
+     <br />
+     <Link to="/login" onClick={() => localStorage.removeItem("token")}>Log out</Link>
 
     <Switch>
      <PrivateRoute path="/protected" component={FriendsList} />
